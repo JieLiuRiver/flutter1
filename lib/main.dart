@@ -6,6 +6,7 @@ import './demo/basec_demo.dart';
 import './demo/layout_demo.dart';
 import './demo/view_demo.dart';
 import './demo/sliver_demo.dart';
+import './demo/navigator_demo.dart';
 
 void main() => runApp(App());
 
@@ -13,7 +14,12 @@ class App extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      home:  SliverDemo(), // Home(),
+      // home:  // SliverDemo(), // Home(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(), //NavigatorDemo(),
+        '/about': (context) => Page(title: 'About')
+      },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
