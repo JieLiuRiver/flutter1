@@ -35,7 +35,7 @@ class ListViewDemo extends StatelessWidget{
                     MaterialPageRoute(
                       builder: (context) => PostShow(post: posts[index])
                     )
-                  )
+                  );
                 }
               ),
             ),
